@@ -1,0 +1,13 @@
+import mysql.connector
+
+mydb = mysql.connector.connect(
+	host = "localhost",
+	user = "root",
+	passwd = "And3rs0n713!",
+	database = "BookDB")
+
+my_cursor = mydb.cursor()
+
+my_cursor.execute("CREATE DATABASE BookDB")
+
+my_cursor.execute("CREATE TABLE book_table(Book_Title varchar(255), Book_Author varchar(255), Genre varchar(255), Mood varchar(255), Pages integer(8), Book_ID integer AUTO_INCREMENT PRIMARY key)")
