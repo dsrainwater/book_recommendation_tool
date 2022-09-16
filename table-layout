@@ -6,9 +6,12 @@ mydb = mysql.connector.connect(
 	passwd = "And3rs0n713!",
 	database = "BookDB")
 
+#Create cursor instance
 my_cursor = mydb.cursor()
 
+#Create database
 my_cursor.execute("CREATE DATABASE BookDB")
 
+#Create table
 my_cursor.execute("CREATE TABLE book_table(Book_Title varchar(255), Book_Author varchar(255), Genre varchar(255), Mood varchar(255), Pages integer(8), Book_ID integer AUTO_INCREMENT PRIMARY key)")
 my_cursor.execute("SHOW TABLES")
